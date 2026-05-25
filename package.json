@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "workspaces": [
-    "client",
-    "server"
+    "frontend",
+    "backend"
   ],
   "engines": {
     "node": "20.x"
@@ -12,8 +12,8 @@
   
   "scripts": {
     "build": "node build.js",
-    "start": "node server/src/index.js",
-    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\""
+    "start": "node backend/src/index.js",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\""
   },
   "devDependencies": {
     "concurrently": "^8.2.0"

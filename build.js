@@ -3,12 +3,12 @@ const fs = require('fs');
 const path = require('path');
 
 try {
-  // 1. Run Vite build inside the client directory
-  console.log('Building client application...');
-  execSync('npm run build', { cwd: path.join(__dirname, 'client'), stdio: 'inherit' });
+  // 1. Run Vite build inside the frontend directory
+  console.log('Building frontend application...');
+  execSync('npm run build', { cwd: path.join(__dirname, 'frontend'), stdio: 'inherit' });
 
   // 2. Define source and destination directories
-  const srcDir = path.join(__dirname, 'client', 'dist');
+  const srcDir = path.join(__dirname, 'frontend', 'dist');
   const destDir = path.join(__dirname, 'public');
 
   // 3. Clear or create the root public directory
