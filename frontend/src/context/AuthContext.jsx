@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
   // API base URL - checks if running in Vercel or defaults locally
-  const API_URL = import.meta.env.VITE_API_URL || '/api';
+  const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? '/api' : '/_/backend/api');
 
   useEffect(() => {
     if (token) {
