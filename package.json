@@ -7,7 +7,7 @@
   },
   
   "scripts": {
-    "build": "cd client && npm run build",
+    "build": "node build.js",
     "start": "node server/src/index.js",
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\""
   },
