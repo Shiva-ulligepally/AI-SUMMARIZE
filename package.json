@@ -16,7 +16,6 @@
     "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\""
   },
   "devDependencies": {
-    "concurrently": "^8.2.0",
-    "turbo": "^2.0.0"
+    "concurrently": "^8.2.0"
   }
 }
