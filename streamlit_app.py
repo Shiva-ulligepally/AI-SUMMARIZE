@@ -128,7 +128,7 @@ def generate_pdf_bytes(title, content, summary_type, length, word_count):
     meta_str = f"Type: {summary_type.upper()}  |  Length: {length.upper()}  |  Words: {word_count}"
     pdf.cell(0, 5, meta_str, ln=True)
     
-    return pdf.output()
+    return bytes(pdf.output())
 
 # Document Parser Helpers
 def parse_pdf(file):
