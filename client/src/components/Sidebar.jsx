@@ -92,15 +92,14 @@ export default function Sidebar() {
           </span>
         </button>
 
-        {/* User Card */}
         {user && (
           <div className="flex items-center space-x-3 p-2 rounded-xl bg-slate-900/10 dark:bg-slate-950/10 border border-slate-900/30">
             <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-600 to-cyan-400 flex items-center justify-center text-white font-extrabold text-sm shadow-md">
-              {user.name.charAt(0).toUpperCase()}
+              {user?.name ? user.name.charAt(0).toUpperCase() : 'U'}
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-xs font-bold text-slate-200 truncate">{user.name}</p>
-              <p className="text-[10px] text-slate-500 truncate">{user.email}</p>
+              <p className="text-xs font-bold text-slate-200 truncate">{user?.name || 'User'}</p>
+              <p className="text-[10px] text-slate-500 truncate">{user?.email || ''}</p>
             </div>
           </div>
         )}
